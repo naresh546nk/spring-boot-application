@@ -23,7 +23,7 @@ public class Customer {
 	private String emailId;
 	private String mobileNo;
 	
-	  @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	  @OneToMany(cascade = CascadeType.ALL,  fetch = FetchType.LAZY)
 	    @JoinTable(name = "cust_address",
         joinColumns =@JoinColumn(name = "customerId"),
         inverseJoinColumns = @JoinColumn(name = "id"))
